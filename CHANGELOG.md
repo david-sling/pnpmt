@@ -1,5 +1,11 @@
 # pnpmt
 
+## 0.3.0
+
+### Minor Changes
+
+- 99b9c19: optional scripts allowed in package
+
 ## 0.2.0
 
 ### Minor Changes
