@@ -1,5 +1,11 @@
 # pnpmt
 
+## 0.2.0
+
+### Minor Changes
+
+- f32f629: figlet to cfonts
+
 ## 0.1.0
 
 ### Minor Changes
