@@ -2,6 +2,7 @@
 
 import { Effect, pipe } from 'effect';
 import {
+  filterAppsWithPackageJson,
   getPackagesFromWorkspaceConfig,
   getScriptsFromPackageJson,
   isPnpmProject,
@@ -23,6 +24,7 @@ export const listCommand = pipe(
       Effect.andThen(isPnpmWorkspace),
       Effect.andThen(getPackagesFromWorkspaceConfig),
       Effect.andThen(Effect.forEach(getScriptsFromPackageJson)),
+      Effect.andThen(filterAppsWithPackageJson),
       Effect.andThen(selectAndRunScript),
       Effect.andThen(runCommand),
       // Error handling

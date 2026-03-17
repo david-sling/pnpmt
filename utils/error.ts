@@ -27,14 +27,6 @@ export class YamlParseError extends Data.TaggedError('YamlParseError') {}
 
 export class JSONParseError extends Data.TaggedError('JSONParseError') {}
 
-export class CommandFailureError extends Data.TaggedError(
-  'CommandFailureError',
-) {}
-
-export class CommandExecutionError extends Data.TaggedError(
-  'CommandExecutionError',
-) {}
-
 export class GroupedCommandNotFound extends Data.TaggedError(
   'GroupedCommandNotFound',
 )<{ name: string }> {
