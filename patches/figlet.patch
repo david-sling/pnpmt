@@ -1,0 +1,52 @@
+diff --git a/dist/types/cjs/figlet.d.cts b/dist/types/cjs/figlet.d.cts
+index 1a405f626d6d82f3fa2b942f42f6263f907a8497..f321fd9501d197c7ebfd26bb274c1c1c23ba2e5c 100644
+--- a/dist/types/cjs/figlet.d.cts
++++ b/dist/types/cjs/figlet.d.cts
+@@ -96,7 +96,7 @@ declare type FontName =
+   | "Small"
+   | "Speed"
+   | "Tinker-Toy"
+-  | string;
++  | (string & {});
+ 
+ declare type KerningMethods = "default" | "full" | "fitted" | "controlled smushing" | "universal smushing";
+ 
+diff --git a/dist/types/cjs/node-figlet.d.cts b/dist/types/cjs/node-figlet.d.cts
+index b7dd4b34dcd75eca576d5c24c9fcfda514e891c7..11a9ba68c440b1ddfb3c30ecd341e1ca5fed8cf4 100644
+--- a/dist/types/cjs/node-figlet.d.cts
++++ b/dist/types/cjs/node-figlet.d.cts
+@@ -96,7 +96,7 @@ declare type FontName =
+   | "Small"
+   | "Speed"
+   | "Tinker-Toy"
+-  | string;
++  | (string & {});
+ 
+ declare type KerningMethods = "default" | "full" | "fitted" | "controlled smushing" | "universal smushing";
+ 
+diff --git a/dist/types/esm/figlet.d.ts b/dist/types/esm/figlet.d.ts
+index 8db1dffcf1863ce464825063a58549a5f31f6418..eeba6ec7255feb64b4c1f291ab24a064e9dbe43e 100644
+--- a/dist/types/esm/figlet.d.ts
++++ b/dist/types/esm/figlet.d.ts
+@@ -73,7 +73,7 @@ export declare interface FontMetadata {
+     printDirection?: PrintDirection;
+ }
+ 
+-export declare type FontName = "1Row" | "3-D" | "3D Diagonal" | "3D-ASCII" | "3x5" | "4Max" | "5 Line Oblique" | "Standard" | "Ghost" | "Big" | "Block" | "Bubble" | "Digital" | "Ivrit" | "Mini" | "Script" | "Shadow" | "Slant" | "Small" | "Speed" | "Tinker-Toy" | string;
++export declare type FontName = "1Row" | "3-D" | "3D Diagonal" | "3D-ASCII" | "3x5" | "4Max" | "5 Line Oblique" | "Standard" | "Ghost" | "Big" | "Block" | "Bubble" | "Digital" | "Ivrit" | "Mini" | "Script" | "Shadow" | "Slant" | "Small" | "Speed" | "Tinker-Toy" | (string & {});
+ 
+ declare type KerningMethods = "default" | "full" | "fitted" | "controlled smushing" | "universal smushing";
+ 
+diff --git a/dist/types/esm/node-figlet.d.ts b/dist/types/esm/node-figlet.d.ts
+index 20ea69d4a59f5fcbbb27f90483a140070aca3a63..d796c74a2c21cafb199aa737f4f9b912762d6851 100644
+--- a/dist/types/esm/node-figlet.d.ts
++++ b/dist/types/esm/node-figlet.d.ts
+@@ -70,7 +70,7 @@ export declare interface FontMetadata {
+     printDirection?: PrintDirection;
+ }
+ 
+-export declare type FontName = "1Row" | "3-D" | "3D Diagonal" | "3D-ASCII" | "3x5" | "4Max" | "5 Line Oblique" | "Standard" | "Ghost" | "Big" | "Block" | "Bubble" | "Digital" | "Ivrit" | "Mini" | "Script" | "Shadow" | "Slant" | "Small" | "Speed" | "Tinker-Toy" | string;
++export declare type FontName = "1Row" | "3-D" | "3D Diagonal" | "3D-ASCII" | "3x5" | "4Max" | "5 Line Oblique" | "Standard" | "Ghost" | "Big" | "Block" | "Bubble" | "Digital" | "Ivrit" | "Mini" | "Script" | "Shadow" | "Slant" | "Small" | "Speed" | "Tinker-Toy" | (string & {});
+ 
+ declare type KerningMethods = "default" | "full" | "fitted" | "controlled smushing" | "universal smushing";
+ 

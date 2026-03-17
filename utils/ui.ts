@@ -6,7 +6,12 @@ import { passion } from 'gradient-string';
 export const intro = () => {
   console.clear();
 
+  figlet.defaults({
+    fontPath: './fonts',
+  });
+
   const bigTitle = figlet.textSync('PNPMT', {
+    font: 'Speed',
     whitespaceBreak: true,
   });
   const gradientTitle = passion(bigTitle);

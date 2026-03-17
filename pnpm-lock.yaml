@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  figlet:
+    hash: rgfprz43ugtkpr5zhafjow3yeu
+    path: patches/figlet.patch
+
 importers:
   .:
     dependencies:
@@ -43,7 +48,7 @@ importers:
         version: 3.19.19
       figlet:
         specifier: ^1.11.0
-        version: 1.11.0
+        version: 1.11.0(patch_hash=rgfprz43ugtkpr5zhafjow3yeu)
       gradient-string:
         specifier: ^3.0.0
         version: 3.0.0
@@ -3317,7 +3322,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
-  figlet@1.11.0:
+  figlet@1.11.0(patch_hash=rgfprz43ugtkpr5zhafjow3yeu):
     dependencies:
       commander: 14.0.3
 
