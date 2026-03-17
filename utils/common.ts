@@ -107,7 +107,8 @@ export const getScriptsFromPackageJson = (packagePath: string) =>
         catch: () => new JSONParseError(),
       }),
       Effect.andThen((d) =>
-        Schema.decodeUnknown(packageJsonSchema)({
+        Schema.decode(packageJsonSchema)({
+          scripts: {},
           ...d,
           workingDirectory: packagePath,
         }),

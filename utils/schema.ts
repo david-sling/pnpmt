@@ -25,7 +25,7 @@ export const packageJsonSchema = Schema.Struct({
       message: 'scripts must be an object of strings',
       override: true,
     }),
-  }),
+  }).pipe(Schema.optional),
   name: Schema.NonEmptyString.annotations({
     message: () => ({
       message: 'name must be a string',
