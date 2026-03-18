@@ -15,6 +15,7 @@ import { intro } from '../utils/ui';
 
 const text = Args.text({ name: 'packageName' }).pipe(
   Args.withDescription('The name of the package to be added'),
+  Args.repeated,
 );
 
 export const addCommand = Command.make('add', { text }, ({ text }) =>
@@ -26,7 +27,7 @@ export const addCommand = Command.make('add', { text }, ({ text }) =>
     Effect.andThen(Effect.forEach(getScriptsFromPackageJson)),
     Effect.andThen(filterAppsWithPackageJson),
     Effect.andThen((packages) =>
-      selectAppsAndRunCommand(packages, ' pnpm install ' + text),
+      selectAppsAndRunCommand(packages, ['pnpm install', ...text].join(' ')),
     ),
     Effect.catchTag('NotAPnpmProjectError', (err) => log(err.message)),
     Effect.catchTag('NotAPnpmWorkspaceError', (err) => log(err.message)),

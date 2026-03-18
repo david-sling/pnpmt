@@ -357,7 +357,7 @@ export const selectAppsAndRunCommand = (
       checkbox({
         message: gradientTitle('Select a the apps to install in\n'),
         choices: packages.map((pkg) => ({
-          name: spacer + chalk.cyan(pkg.name) + chalk.gray(command),
+          name: spacer + chalk.cyan(pkg.name) + chalk.gray(' ' + command),
           value: pkg,
         })),
       }),
