@@ -39,4 +39,6 @@ export const addCommand = Command.make('add', { text }, ({ text }) =>
     Effect.provide(NodeContext.layer),
     Effect.scoped,
   ),
+).pipe(
+  Command.withDescription('Install a package on multiple apps concurrently.'),
 );
